@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/tools"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    app:ignore="NamespaceTypo">
+
+
+
+    <ProgressBar
+        android:layout_width="fill_parent"
+        android:layout_height="3dip"
+        android:layout_alignParentTop="true"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:id="@+id/progressbar_Horizontal"
+        android:max="100"
+        android:background="@color/colorAccent" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="54dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <WebView
+        android:id="@+id/webView1"
+        android:layout_below="@id/progressbar_Horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerVertical="true"
+        android:layout_centerInParent="true"
+        android:scrollbars="none"
+        />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id">
+    </com.google.android.gms.ads.AdView>
+
+
+
+</RelativeLayout>
